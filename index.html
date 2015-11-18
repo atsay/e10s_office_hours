@@ -2,57 +2,57 @@
 <head></head>
 <body>
 
-Starting Dec. 1, 2015, the following people are ready to assist you <b>every Tuesday</b> in the #addons channel at irc.mozilla.org.
+	Starting Dec. 1, 2015, the following people are ready to assist you <b>every Tuesday</b> in the #addons channel at irc.mozilla.org.
 
-Find out <a href="https://developer.mozilla.org/Add-ons/Working_with_multiprocess_Firefox#Testing" target="_blank">more</a> about Multiprocess Firefox (e10s).
+	Find out <a href="https://developer.mozilla.org/Add-ons/Working_with_multiprocess_Firefox#Testing" target="_blank">more</a> about Multiprocess Firefox (e10s).
 
 	<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart', 'timeline']}]}"></script>
-   
-    <div id="chart_div"></div>
+	
+	<div id="chart_div"></div>
 
- <script>
-      google.load('visualization', '1', {packages: ['timeline']});
-    google.setOnLoadCallback(drawChart);
+	<script>
+		google.load('visualization', '1', {packages: ['timeline']});
+		google.setOnLoadCallback(drawChart);
 
-    function dateFromTime(h, m) {
-    	var localToday = new Date();
-    	var pacificToday = new Date(Date.UTC(
-    		localToday.getFullYear(),
-    		localToday.getMonth(),
-    		localToday.getDate(),
-    		h + 8,
-    		m
-    	));
-    	return pacificToday;
-    }
+		function dateFromTime(h, m) {
+			var localToday = new Date();
+			var pacificToday = new Date(Date.UTC(
+				localToday.getFullYear(),
+				localToday.getMonth(),
+				localToday.getDate(),
+				h + 8,
+				m
+				));
+			return pacificToday;
+		}
 
-    function drawChart() {
-      var data = google.visualization.arrayToDataTable([
-        ['Activity', 'Start Time', 'End Time'],
-        ['JorgeV',
-         dateFromTime(7, 0),
-         dateFromTime(15, 0)],
-        ['Giorgio',
-         dateFromTime(2, 0),
-         dateFromTime(4, 0)],
-        ['BillM',
-         dateFromTime(14, 0),
-         dateFromTime(16, 0)],
-        ['mconley',
-         dateFromTime(9, 30),
-         dateFromTime(11, 30)],
-      ]);
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['Activity', 'Start Time', 'End Time'],
+				['JorgeV',
+				dateFromTime(7, 0),
+				dateFromTime(15, 0)],
+				['Giorgio',
+				dateFromTime(2, 0),
+				dateFromTime(4, 0)],
+				['BillM',
+				dateFromTime(14, 0),
+				dateFromTime(16, 0)],
+				['mconley',
+				dateFromTime(9, 30),
+				dateFromTime(11, 30)],
+				]);
 
-      var options = {
-        height: 450,
-      };
+			var options = {
+				height: 450,
+			};
 
-      var chart = new google.visualization.Timeline(document.getElementById('chart_div'));
+			var chart = new google.visualization.Timeline(document.getElementById('chart_div'));
 
-      chart.draw(data, options);
-    }
+			chart.draw(data, options);
+		}
 
- </script>
+	</script>
 
 </body>
 </html>
