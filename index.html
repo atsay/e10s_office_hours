@@ -2,77 +2,9 @@
 <head></head>
 <body>
 
-	<p>We urge <b>all add-on developers</b> to test their add-ons for <a href="https://developer.mozilla.org/Add-ons/Working_with_multiprocess_Firefox#Testing" target="_blank">Multiprocess Firefox (e10s)</a> compatibility. The following people are available to assist you <b>every Tuesday</b> in the #addons channel at irc.mozilla.org. We're here to help!</p>
-
-	<p>More details on migrating your add-on can be found on <a href="https://wiki.mozilla.org/Add-ons/developer/communication" target="_blank">this wiki</a>.</p>
-
-	<p>Times are displayed in your time zone, based on the settings of your computer.</p>
+	<p>We urge <b>all add-on developers</b> to test their add-ons for <a href="https://developer.mozilla.org/Add-ons/Working_with_multiprocess_Firefox#Testing" target="_blank">Multiprocess Firefox (e10s)</a> compatibility. We are no longer holding regular office hours, but we're still <a href="https://wiki.mozilla.org/Add-ons/developer/communication#Get_in_Touch" target="_blank">available to provide help!</a></p>
 	
-	<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart', 'timeline']}]}"></script>
-
-	<div id="chart_div"></div>
-
-	<script>
-		google.load('visualization', '1', {packages: ['timeline']});
-		google.setOnLoadCallback(drawChart);
-
-		function dateFromTime(h, m) {
-			var localToday = new Date();
-			var pacificToday = new Date(Date.UTC(
-				localToday.getFullYear(),
-				localToday.getMonth(),
-				localToday.getDate(),
-				h + 8,
-				m
-				));
-			return pacificToday;
-		}
-
-		function drawChart() {
-			var data = google.visualization.arrayToDataTable([
-				['Activity', 'Start Time', 'End Time'],
-				['mao',
-				dateFromTime(2, 0),
-				dateFromTime(4, 0)],
-				['Gabor',
-				dateFromTime(4, 0),
-				dateFromTime(6, 0)],
-				['rpl',
-				dateFromTime(5, 0),
-				dateFromTime(7, 0)],
-				['JorgeV',
-				dateFromTime(7, 0),
-				dateFromTime(15, 0)],
-				['mconley',
-				dateFromTime(9, 30),
-				dateFromTime(11, 30)],
-				['AndyM',
-				dateFromTime(10, 0),
-				dateFromTime(12, 0)],
-				['john-galt',
-				dateFromTime(11, 0),
-				dateFromTime(19, 0)],
-				['mossop',
-				dateFromTime(13, 0),
-				dateFromTime(17, 0)],
-				['BillM',
-				dateFromTime(14, 0),
-				dateFromTime(16, 0)],
-				['ashughes',
-				dateFromTime(14, 0),
-				dateFromTime(16, 0)],
-				]);
-
-			var options = {
-				height: 450,
-			};
-
-			var chart = new google.visualization.Timeline(document.getElementById('chart_div'));
-
-			chart.draw(data, options);
-		}
-
-	</script>
+	<p>More details on the changes happening in add-on development can be found on <a href="https://wiki.mozilla.org/Add-ons/developer/communication" target="_blank">this wiki</a>.</p>
 
 </body>
 </html>
